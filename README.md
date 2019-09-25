@@ -41,7 +41,7 @@ jobs:
 - name: my-job
   plan:
   - put: ((concourse-resource-name))
-  params: {claim: ((lock-name))} # or acquire: true to obtain a random lock
+    params: {claim: ((lock-name))} # or acquire: true to obtain a random lock
 ```
 Use `ensure` to release the resource even if the task failed/crashed:
 ```yaml
