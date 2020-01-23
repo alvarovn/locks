@@ -55,5 +55,11 @@ jobs:
       params: {release: latest}
 ```
 
-
+## Manually releasing locks
+If it is neccesary to manually release a lock, this can be done by moving the file from `claimed` to `unclaimed`, e.g.:
+```sh
+git mv latest/claimed/web-integration latest/unclaimed
+git commit -m "Manually release lock"
+git push
+```
 
